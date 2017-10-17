@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>firstweb</title>
+	<!--[if lt IE 9]
+	<script src = ""
+
+	-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+</head>
+<body>
+<div class="container">
+<header>
+<nav>
+		<ol>
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="/Comments.html">Comments</a></li>
+			<li><a href="/About.html">About</a></li>
+			<li><a href="/Contact.html">Contact</a></li>
+		</ol>
+</nav>
+
+	
+	
+</header>
+<section id="main">
+<p>This is <em>Home</em> Page of <strong> firstweb.com</strong></p>
+<div class="login-form bordered">
+<form action="/api/login" method="POST">
+	<label for="username">Username :</label>
+	<input type="text" name="username" id="username"/><br/>
+	<label for="password">Password :</lable>
+	<input type="password" name="password" id="password"/><br/>
+	<input type="checkbox" name="remember" id="remember"/>
+	<label for="remember">Remember me</label> <br/>
+
+	<input type="submit" name="loginbutton" value="Login" onclick="take();" />
+	<input type="reset" name="cancelbutton" value="Cancel"/>
+</form>
+</div>
+<div id = "results">
+	Here we will display results..!!
+</div>
+</section>
+<footer>
+	&copy; 2017 firstweb.com
+</footer>
+</div>
+<script type="text/javascript" src="js/app.js "></script>
+</body>
+</html>

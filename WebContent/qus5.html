@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question5</title>
+	<!--[if lt IE 9]
+	<script src = ""
+
+	-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript">
+	
+	function check_info(){
+		var ans=document.getElementById("confirmationText").value;
+		if(ans==""){
+			alert("Please Enter Something..!!");
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	
+	</script>
+
+
+</head>
+<body>
+<div class="container">
+<header>
+<nav>
+		<ol>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Comments.html">Comments</a></li>
+			<li><a href="About.html">About</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ol>
+</nav>
+
+	
+	
+</header>
+<section id="main">
+<div class="login-form bordered">
+<form action="qus5.jsp" method = "post" style="background-color:skyblue" onsubmit="return check_info()">
+<label for="qus1" > Question 5 :  :</label></br></br>
+<textarea id="confirmationText" class="text" cols="86" rows ="20" name="confirmationText"></textarea>
+</br>
+</br>
+
+
+<input type="reset" name="cancelbutton" value="Reset"/>
+<input type="submit" name="loginbutton" value="Next"/>
+</form>
+</div>
+
+</section>
+<footer>
+	&copy; 2017 BEProjectWeb.com
+</footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

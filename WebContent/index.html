@@ -1,0 +1,180 @@
+
+<html>
+<head>
+	<title>BE Project Webapp</title>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript">
+		
+		function check_info(){
+			var fname = document.getElementById("firstname").value;
+			var lname = document.getElementById("lastname").value;
+			var email = document.getElementById("email").value;
+			var zip = document.getElementById("zip").value;
+			var city = document.getElementById("city").value;
+			var age = document.getElementById("age").value;
+			var uname = document.getElementById("username").value;
+			var pass1 = document.getElementById("password1").value;
+			var pass2 = document.getElementById("password2").value;
+			if(fname=="" || lname=="" || email=="" || zip=="" || city=="" || age=="" || uname=="" || pass1=="" || pass2==""){
+				alert("Please Fill all Fields..!!");
+				return false;
+			}
+			else{
+				if(pass1==pass2){
+					return true;
+				}
+				else{
+					alert("Please Confirm Your Password..!!");
+					return false;
+				}
+				
+			}
+			
+			
+		}
+		function check_login(){
+			var uname=document.getElementById("user").value;
+			var pword=document.getElementById("pass").value;
+			if(uname==""||pword==""){
+				alert("please fill all fields..!!");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+	
+	
+	</script>
+	
+
+</head>
+<body >
+<div class="container">
+<header>
+<nav>
+		<ol>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Comments.html">Comments</a></li>
+			<li><a href="About.html">About</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ol>
+</nav>
+	
+	
+	
+</header>
+
+<div class="login-form bordered">
+
+<div>
+
+<span>User Registration</span>
+<span>[<sup>*</sup> Required Fields]</span>
+</div>
+<div style="float:left; width: 60%; height: 250px; background-color: lightblue;">
+<form action="process.jsp" method="post" onsubmit="return check_info()">
+ <table border="0" cellspacing="3" cellpadding="5" width="100%">
+<tbody>
+
+<tr>
+<td>
+<strong>First Name<sup>*</sup> :</strong>
+<td>
+<input type="text" name="firstName" value="" size="20" maxlength="20" id = "firstname"/></td>
+<td>
+<strong>Last Name<sup>*</sup> :</strong>
+ <td>
+<input type="text" name="lastName" value="" size="15" maxlength="20" id="lastname"/></td>
+</tr>
+<tr>
+<td>
+<strong>E-Mail<sup>*</sup> :</strong>
+ <td>
+<input type="text" name="email" value="" size="25" maxlength="125" id="email"/></td>
+<td>
+<strong>Age<sup>*</sup> :</strong>
+ <td>
+<input type="text" name="age" value="" size="6" maxlength="5" id="age"/></td>
+</tr>
+<tr>
+<td>
+<strong>City<sup>*</sup> :</strong></td>
+ <td>
+<input type="text" name="city" value="" size="20" maxlength="20" id="city"/></td>
+<td>
+<strong>Zip Code<sup>*</sup> :</strong></td>
+ <td>
+<input type="text" name="zip" value="" size="10" maxlength="8" id="zip"/></td>
+</tr>
+<tr>
+<td>
+<strong>User Name<sup>*</sup> :</strong>
+ </td>
+ <td>
+ <input type="text" name="userName" value="" size="20" maxlength="15" id="username"/>
+ </td>
+ <td colspan="2"></td>
+</tr>
+<tr>
+<td>
+<strong>Password<sup>*</sup> :</strong>
+ <td>
+<input type="password" name="password1" value="" size="15" maxlength="15" id="password1"/></td>
+<td>
+<strong>Confirm Password<sup>*</sup> :</strong>
+ <td>
+<input type="password" name="password2" value="" size="15" maxlength="15" id="password2"/></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Submit" /><input type="reset" value="Reset" /></td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+<div style="float:right; width: 39%;  height: 250px; background-color: lightblue;">
+<form action="login.jsp" method="post" onsubmit="return check_login()">
+<table cellspacing="3" cellpadding="5" width="100%">
+<tr>
+<td>
+<strong>
+User Name :
+</strong>
+</td>
+<td>
+<input type="text" name="userNameLogin" value="" size="20" maxlength="15" id = "user" />
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Password :
+</strong>
+</td>
+<td>
+<input type="password" name="passwordLogin" value="" size="15" maxlength="15" id="pass"/>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<input type="submit" value="Login" />
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+
+</div>
+
+<footer>
+	&copy; 2017 ProjectWebApp.com
+</footer>
+</div>
+</body>
+
+</html>
